@@ -1,5 +1,5 @@
 {
-    "name": "gsa/wordpress-seo",
+    "name": "gsa/custom-permalinks",
     "description": "Data.gov specific fixes for custom-permalinks",
     "type": "wordpress-plugin",
     "require": {
