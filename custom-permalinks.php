@@ -192,7 +192,10 @@ function custom_permalinks_request($query) {
                    strtolower($request_noslash) ) );
   }
 
-  if ( $originalUrl === NULL ) {
+  // execute the block below only if $posts is NOT null
+  // why even bother doing anything to the post request var if there is no custom_permalink metadata for it.
+  // $posts will contain something if there is custom_pemalink metadata preset for the current post
+  if ( $originalUrl === NULL && $posts ) {
       // See if any terms have a matching permalink
     $table = get_option('custom_permalink_table');
     if ( !$table ) return $query;
